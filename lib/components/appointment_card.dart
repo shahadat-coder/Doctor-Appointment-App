@@ -3,7 +3,7 @@ import 'package:doctor_appoinment_app/utils/config.dart';
 import 'package:flutter/material.dart';
 
 class AppointmentCard extends StatefulWidget {
-  const AppointmentCard({super.key});
+  const AppointmentCard({super.key, required Map<String, dynamic> doctor, required MaterialAccentColor color});
 
   @override
   State<AppointmentCard> createState() => _AppointmentCardState();

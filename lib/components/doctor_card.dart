@@ -6,11 +6,12 @@ class DoctorCard extends StatelessWidget {
   const DoctorCard({
     Key? key,
     required this.doctor,
-    required this.isFav,
+    required this.isFav, this.route,
   }) : super(key: key);
 
    final Map<String, dynamic> doctor;
    final bool isFav;
+   final route;
 
   @override
   Widget build(BuildContext context) {
@@ -86,12 +87,7 @@ class DoctorCard extends StatelessWidget {
           ),
         ),
         onTap: () {
-          //pass the details to detail page
-          // MyApp.navigatorKey.currentState!.push(MaterialPageRoute(
-          //     builder: (_) => DoctorDetails(
-          //       doctor: doctor,
-          //       isFav: isFav,
-          //     )));
+          Navigator.of(context).pushNamed(route);
         },
       ),
     );
